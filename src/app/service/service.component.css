@@ -1,4 +1,3 @@
-
 .wrapper {
     position: relative;
     width: 100%;
@@ -90,123 +89,97 @@
     }
 }
 
-/* page header :end */
+/*   page header end  */
 
-.about {
+
+/*******************************/
+/********* Service CSS *********/
+/*******************************/
+.service {
     position: relative;
     width: 100%;
-    padding: 45px 0;
+    padding: 45px 0 15px 0;
 }
 
-.about .section-header {
+.service .service-item {
+    position: relative;
+    width: 100%;
+    text-align: center;
     margin-bottom: 30px;
 }
 
-.about .about-img {
+.service .service-img {
     position: relative;
-    height: 100%;
+    overflow: hidden;
 }
 
-.about .about-img img {
+.service .service-img img {
+    width: 100%;
+}
+
+.service .service-overlay {
+    position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-}
-
-.about .about-text p {
-    font-size: 16px;
-}
-
-.about .about-text a.btn {
-    position: relative;
-    margin-top: 15px;
-    padding: 15px 35px;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    color: #030f27;
-    border-radius: 0;
-    background: #fdbe33;
-    transition: .3s;
-}
-
-.about .about-text a.btn:hover {
-    color: #fdbe33;
-    background: #030f27;
-}
-
-@media (max-width: 767.98px) {
-    .about .about-img {
-        margin-bottom: 30px;
-        height: auto;
-    }
-}
-
-
-/*******************************/
-/********** Fact CSS ***********/
-/*******************************/
-.fact {
-    position: relative;
-    width: 100%;
-    padding: 45px 0;
-}
-
-.fact .col-6 {
-    display: flex;
-    align-items: flex-start;
-}
-
-.fact .fact-icon {
-    position: relative;
-    margin: 7px 15px 0 15px;
-    width: 60px;
+    top: 0;
+    left: 0;
+    padding: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+    background: rgba(3, 15, 39, .7);
+    transition: .5s;
+    opacity: 0;
 }
 
-.fact .fact-icon [class^="flaticon-"]::before {
+.service .service-item:hover .service-overlay {
+    opacity: 1;
+}
+
+.service .service-overlay p {
     margin: 0;
+    color: #ffffff;
+}
+
+.service .service-text {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    background: #030f27;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.service .service-text h3 {
+    margin: 0;
+    padding: 0 15px 0 25px;
+    width: calc(100% - 60px);
+    font-size: 20px;
+    font-weight: 700;
+    color: #fdbe33;
+    text-align: left;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.service .service-item a.btn {
+    width: 60px;
+    height: 60px;
+    padding: 3px 0 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 60px;
     line-height: 60px;
-    background-image: linear-gradient(#ffffff, #fdbe33);
-    /* -webkit-background-clip: text; */
-    -webkit-text-fill-color: transparent;
-}
-
-.fact .fact-right .fact-icon [class^="flaticon-"]::before {
-    background-image: linear-gradient(#ffffff, #030f27);
-}
-
-.fact .fact-left,
-.fact .fact-right {
-    padding-top: 60px;
-    padding-bottom: 60px;
-}
-
-.fact .fact-text h2 {
-    font-size: 35px;
-    font-weight: 700;
-}
-
-.fact .fact-text p {
-    margin: 0;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-.fact .fact-left {
-    color: #fdbe33;
-    background: #030f27;
-}
-
-.fact .fact-right {
+    font-weight: 100;
     color: #030f27;
     background: #fdbe33;
+    border-radius: 0;
+    transition: .3s;
 }
 
-.fact .fact-left h2 {
-    color: #fdbe33;
+.service .service-item:hover a.btn {
+    color: #ffffff;
 }
